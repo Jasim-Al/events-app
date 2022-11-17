@@ -1,7 +1,20 @@
+import Head from "next/head";
+import { Fragment } from "react";
 import EventList from "../components/events/event-list";
 
 function HomePage({ events }) {
-  return <EventList events={events} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>Featured Events</title>
+        <meta
+          name="description"
+          content="Find a lot of great events that allows you to evolve..."
+        />
+      </Head>
+      <EventList events={events} />
+    </Fragment>
+  );
 }
 
 export async function getStaticProps() {
