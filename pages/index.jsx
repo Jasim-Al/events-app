@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Fragment } from "react";
 import EventList from "../components/events/event-list";
+import NewsletterRegistration from "../components/input/newsletter-registration";
 
 function HomePage({ events }) {
   return (
@@ -12,6 +13,7 @@ function HomePage({ events }) {
           content="Find a lot of great events that allows you to evolve..."
         />
       </Head>
+      <NewsletterRegistration />
       <EventList events={events} />
     </Fragment>
   );
